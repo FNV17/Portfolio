@@ -3,7 +3,7 @@ body {
 }
 
 header {
-	background: #bd8501;
+	background: #00ffff;;
 	padding: 20px 0;
 }
 
@@ -33,7 +33,7 @@ nav a {
 }
 
 nav a:hover {
-	color: #fc9700;
+	color: #00ffff;;
 	text-decoration: underline;
 }
 
@@ -89,7 +89,7 @@ footer {
 }
 
 .copyright {
-	color: #fc9700;
+	color: #00ffff;
 	font-size: 13px;
 	margin: 20px 0 0;
 }
@@ -122,8 +122,8 @@ form label, form legend {
 .enviar {
 	width:40%;
 	padding: 15px 0;
-	background: orange;
-	color: darkorange;
+	background: #00ffff;
+	color: blue;
 	font-weight: bold;
 	font-size: 18px;
 	border: none;
@@ -133,7 +133,7 @@ form label, form legend {
 }
 
 .enviar:hover {
-	background: darkorange;
+	background: blue;
 	transform: scale(1.2);
 }
 
@@ -142,8 +142,8 @@ table {
 }
 
 thead {
-	background: #bd8501;
-	color: darkorange;
+	background: #00ffff;;
+	color: blue;
 	font-weight: bold;
 }
 
@@ -167,7 +167,7 @@ td, th {
 
 .principal {
 	padding: 3em 0;
-	background: #bd8501;
+	background: #00ffff;;
 	width: 940px;
 	margin: 0 auto;
 }
