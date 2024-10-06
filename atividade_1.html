@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Atividades</title>
+
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<div class="caixa">
+				<h1><img src="logo.png"></h1>
+
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="atividades.html">Atividades</a></li>
+						<li><a href="contatos.html">Contatos</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+	<body>
+			<h1>Calcule o Número de Times (3x3)</h1>
+			
+			<label for="estudantes">Numero de Estudantes (precisa ser um múltiplo de 3):</label>
+			<input type="número" id="estudantes" name="estudantes" step="3" min="0">
+			
+			<button onclick="calculateTeams()">Calcular os Times</button>
+			
+			<button onclick="resetCounter()">Resetar</button>
+			
+			<p id="resultado"></p>
+			
+			<script>
+				let totalTeams = 0;  
+		
+				function calculateTeams() {
+					var estudantes = parseInt(document.getElementById('estudantes').value);
+					
+					if (estudantes % 3 !== 0) {
+						document.getElementById('resultado').innerText = "Porfavor coloque um número valido de estudantes (múltiplo de 3).";
+						return;
+					}
+		
+					var nteams = estudantes / 3;
+					
+					nteams = Math.round(nteams);
+		
+					totalTeams += nteams;
+		
+					document.getElementById('resultado').innerText = "número de times: " + nteams + " (Times Totais: " + totalTeams + ")";
+				}
+		
+				function resetCounter() {
+					totalTeams = 0; /
+					document.getElementById('estudantes').value = ''; 
+					document.getElementById('resultado').innerText = "Contador resetado. Coloque o número de estudantes.";
+				}
+			</script>
+		</body>
+	</html>
