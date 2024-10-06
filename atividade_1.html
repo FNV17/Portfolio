@@ -23,51 +23,47 @@
 		</header>
 
 		<body>
-			<h1>Calculate Number of Teams (3x3)</h1>
+			<h1>Calcular Número de Times (3x3)</h1>
 			
-			<!-- Input field for number of students -->
-			<label for="students">Number of Students (must be a multiple of 3):</label>
-			<input type="number" id="students" name="students" step="3" min="0">
+			<label for="alunos">Número de Alunos (precisa ser um múltiplo de 3):</label>
+			<input type="número" id="alunos" name="alunos" step="3" min="0">
 			
-			<!-- Button to calculate teams -->
-			<button onclick="calculateTeams()">Calculate Teams</button>
+			<button onclick="calculateTeams()">Calcular Times</button>
 			
-			<!-- Button to reset the counter -->
-			<button onclick="resetCounter()">Reset</button>
+			<button onclick="resetCounter()">Resetar</button>
 			
-			<!-- Area to display the result -->
-			<p id="result"></p>
+			<p id="resultado"></p>
 			
 			<script>
-				let totalTeams = 0;  // To keep track of the total teams
+				let totalTeams = 0;  
 		
 				function calculateTeams() {
-					// Get the number of students from the input
-					var students = parseInt(document.getElementById('students').value);
+
+					var alunos = parseInt(document.getElementById('alunos').value);
 					
-					// Check if input is a valid multiple of 3
-					if (students % 3 !== 0) {
-						document.getElementById('result').innerText = "Please enter a valid number of students (multiple of 3).";
+
+					if (alunos % 3 !== 0) {
+						document.getElementById('resultadoado').innerText = "Por favo colocar número valido de alunos. (múltiplo de 3).";
 						return;
 					}
 		
-					// Calculate the number of teams (divide by 3)
-					var nteams = students / 3;
+
+					var nteams = alunos / 3;
 					
-					// Round the result to the nearest whole number (not strictly necessary here since we divide by 3)
+
 					nteams = Math.round(nteams);
 		
-					// Update the total number of teams
+
 					totalTeams += nteams;
 		
-					// Display the number of teams and the total
-					document.getElementById('result').innerText = "Number of teams: " + nteams + " (Total teams: " + totalTeams + ")";
+					
+					document.getElementById('resultadoado').innerText = "número of teams: " + nteams + " (Times Totais: " + totalTeams + ")";
 				}
 		
 				function resetCounter() {
-					totalTeams = 0; // Reset the total teams
-					document.getElementById('students').value = ''; // Clear the input
-					document.getElementById('result').innerText = "Counter reset. Enter number of students.";
+					totalTeams = 0; 
+					document.getElementById('alunos').value = ''; 
+					document.getElementById('resultado').innerText = "Contador resetado. Coloque o número de alunos.";
 				}
 			</script>
 		</body>
