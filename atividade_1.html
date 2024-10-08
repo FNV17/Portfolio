@@ -6,6 +6,7 @@
 
 		<link rel="stylesheet" href="reset.css">
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="atividade_1.css">
 	</head>
 	<body>
 		<header>
@@ -31,6 +32,7 @@
 	
 		<p>Número de Times: <span id="nteams">0</span></p>
 		<p id="errorMessage" class="error" style="color: red;"></p>
+		<p id="correctMessage" class="correct" style="color: green;"></p>
 	
 		<script>
 			function calculateTeams() {
@@ -50,10 +52,12 @@
 	
 				// Mostrar aviso se há alunos faltando para completar um time
 				if (students % 3 !== 0) {
-					document.getElementById('errorMessage').textContent = "Há alunos faltando para completar um time de 3.";
+					document.getElementById('errorMessage').textContent = "Há " + (students % 3) + " alunos faltando para completar um time de 3.";
 				} else {
-					document.getElementById('errorMessage').textContent = "";
+					document.getElementById('correctMessage').textContent = "Correto."
 				}
+
+				
 	
 				// Mostrar o resultado na página
 				document.getElementById('nteams').textContent = nteams;
@@ -68,6 +72,9 @@
 	
 				// Limpar a mensagem de erro
 				document.getElementById('errorMessage').textContent = "";
+
+				// Limpar a mensagem correta
+				document.getElementById('correctMessage').textContent = "";
 			}
 		</script>
 	</body>
