@@ -23,7 +23,7 @@
 			</div>
 		</header>
 	<body>
-		<title>Calculador BMI</title>
+		<title>Calculadora IMC</title>
 		<style>
 			body {
 				font-family: Arial, sans-serif;
@@ -97,7 +97,7 @@
 		const bmi = peso / (tamanho * tamanho);
 		const resultDiv = document.getElementById('result');
 		
-		resultDiv.innerHTML = `O seu BMI é: ${bmi.toFixed(2)}`;
+		resultDiv.innerHTML = `O seu IMC é: ${bmi.toFixed(2)}`;
 		
 		if (bmi < 18.5) {
 			resultDiv.innerHTML += "<br>Você é abaixo do peso.";
