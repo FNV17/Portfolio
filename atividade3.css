@@ -10,6 +10,16 @@
   border: 2px solid #00ffff; 
 }
 
+.profile-image {
+  width: 120px; /* Size of the profile image */
+  height: 120px; /* Ensure it's a square */
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover; /* Ensure the image covers the area without stretching */
+  margin-bottom: 20px; /* Space between the image and the name */
+}
+
+/* Other existing CSS rules remain the same */
+
 .presentation-card h2 {
   font-size: 36px; 
   font-weight: bold;
