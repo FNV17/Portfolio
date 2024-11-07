@@ -266,3 +266,8 @@ td, th {
 		width: 100%;
 	}
 }
+
+.contact-info {
+	display: none;
+  }
+  
