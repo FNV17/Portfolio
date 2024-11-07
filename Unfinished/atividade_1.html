@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Atividades</title>
+
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="atividade_1.css">
+	</head>
+	<body>
+		<header>
+			<div class="caixa">
+				<h1><img src="logo.png"></h1>
+
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="atividades.html">Atividades</a></li>
+						<li><a href="contatos.html">Contatos</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+	<body>
+		<h1>Calculador de Times 3x3</h1>
+		<label for="students">Coloque o número de alunos:</label>
+		<input type="number" id="students" value="0" min="0" step="1">
+		<button onclick="calculateTeams()">Calcular</button>
+		<button onclick="resetCalculator()">Resetar</button>
+	
+		<p>Número de Times: <span id="nteams">0</span></p>
+		<p id="errorMessage" class="error" style="color: red;"></p>
+		<p id="correctMessage" class="correct" style="color: green;"></p>
+	
+		<script>
+			function calculateTeams() {
+				// Pegar o número de alunos do input
+				var students = parseInt(document.getElementById('students').value);
+	
+				// Verificar se o número de alunos é um número válido
+				if (isNaN(students) || students < 0) {
+					document.getElementById('errorMessage').textContent = "Por favor coloque um número válido.";
+					return;
+				} else {
+					document.getElementById('errorMessage').textContent = "";
+				}
+	
+				// Calcular o número de times
+				var nteams = Math.floor(students / 3);
+	
+				// Mostrar aviso se há alunos faltando para completar um time
+				if (students % 3 !== 0) {
+					document.getElementById('errorMessage').textContent = "Há " + (students % 3) + " alunos faltando para completar um time de 3.";
+					document.getElementById('correctMessage').textContent = ""
+				} else {
+					document.getElementById('correctMessage').textContent = "Correto."
+					document.getElementById('errorMessage').textContent = ""
+				}
+
+				// Mostrar o resultado na página
+				document.getElementById('nteams').textContent = nteams;
+			}
+	
+			function resetCalculator() {
+				// Resetar o valor de input para 0
+				document.getElementById('students').value = 0;
+	
+				// Resetar o número de times para 0
+				document.getElementById('nteams').textContent = 0;
+	
+				// Limpar a mensagem de erro
+				document.getElementById('errorMessage').textContent = "";
+
+				// Limpar a mensagem correta
+				document.getElementById('correctMessage').textContent = "";
+			}
+		</script>
+	</body>
+
+	<footer>
+		<img src="logo-branco.png">
+		<p class="copyright">&copy; Portfolio - 2024</p>
+	</footer>
+</body>
+</html>

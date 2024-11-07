@@ -1,0 +1,126 @@
+.presentation-card {
+  background: #ffffff; 
+  width: 480px; 
+  padding: 40px; 
+  border-radius: 20px; 
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+  text-align: center; 
+  transition: all 0.3s ease-in-out; 
+  margin: 20px auto; 
+  border: 2px solid #00ffff; 
+}
+
+.profile-image {
+  width: 120px; /* Size of the profile image */
+  height: 120px; /* Ensure it's a square */
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover; /* Ensure the image covers the area without stretching */
+  margin-bottom: 20px; /* Space between the image and the name */
+}
+
+/* Other existing CSS rules remain the same */
+
+.presentation-card h2 {
+  font-size: 36px; 
+  font-weight: bold;
+  color: #333; 
+  margin-bottom: 15px; 
+  letter-spacing: 1px; 
+}
+
+.presentation-card p {
+  font-size: 20px; 
+  color: #666; 
+  margin-bottom: 20px; 
+  line-height: 1.6; 
+}
+
+.contact-info {
+  font-size: 18px; 
+  color: #333;
+  margin-top: 20px;
+  line-height: 1.8;
+}
+
+.contact-info span {
+  font-size: 24px; 
+  margin-right: 15px; 
+  vertical-align: middle; 
+}
+
+.burgundy-flag {
+  width: 24px; 
+  height: auto;
+  vertical-align: middle; 
+  margin-left: 10px; 
+}
+
+.button-container {
+  margin-top: 30px;
+}
+
+.button-container button {
+  background-color: #00ffff; 
+  color: #000000; 
+  padding: 15px 35px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #008c8c; 
+  transform: scale(1.05); 
+}
+
+.presentation-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); 
+  transform: translateY(-5px); 
+}
+
+@media screen and (max-width: 768px) {
+  .presentation-card {
+    width: 100%; 
+    padding: 30px; 
+  }
+
+  .presentation-card h2 {
+    font-size: 32px; 
+  }
+
+  .presentation-card p {
+    font-size: 18px; 
+  }
+
+  .button-container button {
+    padding: 12px 30px; 
+    font-size: 18px; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .presentation-card {
+    padding: 20px; 
+  }
+
+  .presentation-card h2 {
+    font-size: 28px; 
+  }
+
+  .presentation-card p {
+    font-size: 16px; 
+  }
+
+  .button-container button {
+    padding: 10px 25px; 
+    font-size: 16px; 
+  }
+}
+
+
+
+
+
+

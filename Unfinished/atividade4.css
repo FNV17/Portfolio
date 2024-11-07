@@ -1,0 +1,104 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset margin and padding for the html and body to avoid extra spacing */
+html, body {
+  height: 100%; /* Ensure body takes up the full height of the viewport */
+  background-color: #f4f4f4; /* Light background for the whole page */
+}
+
+/* Header and Navigation */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0; /* You can adjust this to change the space inside the header */
+  margin: 0; /* Remove any default margin */
+  position: relative; /* If you want to layer content */
+  z-index: 10; /* Keep the header above other content */
+}
+
+header .caixa {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Main Game Styles */
+main {
+  margin-top: 0; /* Remove any default margin from the top */
+  text-align: center;
+  background-image: url('images/background.jpg'); /* Your background image */
+  background-size: cover; /* Make sure the image covers the area */
+  background-position: center; /* Center the background image */
+  padding: 40px 0;
+  border-radius: 10px; /* Optional: rounded corners for the game area */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow effect around the game area */
+  max-width: 100%; /* Ensure it doesn't go beyond the screen width */
+  overflow: hidden; /* Prevents content from overflowing */
+  z-index: 0; /* Ensure the main content stays below the header */
+}
+
+/* Styling the Game Board */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Card Styles */
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 24px;
+}
+
+.card.flip {
+  background-color: #fff;
+}
+
+.card.matched {
+  background-color: #4CAF50;
+  pointer-events: none;
+}
+
+/* Game Status Styling */
+.game-status {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+
+
+
+
+
